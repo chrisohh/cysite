@@ -1,0 +1,76 @@
+---
+import profile from '../data/profile.json';
+
+const email = profile.emails_public[1].email; // cohh@ucsd.edu
+---
+
+<section class="contact" id="contact">
+  <div class="container contact__inner">
+    <h2>Contact</h2>
+
+    <div class="contact__grid">
+      <div class="contact__block">
+        <h3>Email</h3>
+        <p><a href={`mailto:${email}`}>{email}</a></p>
+      </div>
+
+      <div class="contact__block">
+        <h3>Institution</h3>
+        <p>
+          <a href={profile.links.scripps_profile} target="_blank" rel="noopener">Scripps Institution of Oceanography</a>
+        </p>
+        <p>
+          <a href={profile.links.airsea_lab_people} target="_blank" rel="noopener">Air-Sea Interaction Laboratory</a>
+        </p>
+      </div>
+
+      <div class="contact__block">
+        <h3>Profiles</h3>
+        <p><a href={profile.google_scholar} target="_blank" rel="noopener">Google Scholar</a></p>
+        <p><a href={`https://orcid.org/${profile.orcid}`} target="_blank" rel="noopener">ORCID</a></p>
+        <p><a href={profile.links.researchgate} target="_blank" rel="noopener">ResearchGate</a></p>
+        <p><a href={profile.links.linkedin} target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; {new Date().getFullYear()} Chan-Ye Ohh</p>
+  </div>
+</footer>
+
+<style>
+  .contact__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact__block h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .contact__block p {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-subtle);
+    border-top: 1px solid #e0e0e0;
+  }
+
+  @media (max-width: 768px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>
