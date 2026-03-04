@@ -1,0 +1,142 @@
+\documentclass[11pt, letterpaper]{article}
+
+% --- Packages ---
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+% --- Colors ---
+\definecolor{heading}{HTML}{1a5276}
+
+% --- Section formatting ---
+\titleformat{\section}{\large\bfseries\color{heading}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+
+% --- List formatting ---
+\setlist[itemize]{left=0pt, nosep, label={}}
+
+% --- Commands ---
+\newcommand{\cventry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill \textit{#4} \\[0.4em]
+}
+
+\newcommand{\cvpub}[1]{\noindent #1 \\[0.4em]}
+
+% --- TODO marker (renders as highlighted box in PDF, edit cv/cv.tex to resolve) ---
+\newcommand{\cvtodo}[1]{%
+  \noindent\fcolorbox{orange}{yellow!20}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+      \small\textbf{TODO} \textit{(edit \texttt{cv/cv.tex}):} #1%
+    }%
+  }\\[0.6em]%
+}
+
+% --- Document ---
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Chan-Ye (Chris) Ohh} \\[0.3em]
+  Postdoctoral Scholar, Marine Physical Laboratory, Scripps Institution of Oceanography \\
+  \href{mailto:cohh@ucsd.edu}{cohh@ucsd.edu} \quad
+  \href{https://orcid.org/0000-0002-7313-4291}{ORCID: 0000-0002-7313-4291} \\
+  \href{https://scholar.google.com/citations?user=3VvK59oAAAAJ}{Google Scholar}
+\end{center}
+
+\section{Education}
+
+\cventry{University of Southern California}{Los Angeles, CA}{Ph.D., [Department]}{2023}
+
+\cvtodo{Fill in department name and any additional degrees (B.S., M.S., etc.)}
+
+\section{Research Experience}
+
+\cventry{Postdoctoral Scholar}{La Jolla, CA}
+  {Air-Sea Interaction Laboratory, Scripps Institution of Oceanography, UC San Diego}{[Year]--Present}
+
+\cventry{Graduate Research Assistant}{Los Angeles, CA}
+  {Stratified Fluids Laboratory, University of Southern California}{[Year]--2023}
+
+\cvtodo{Fill in start years for both positions above.}
+
+\section{Publications}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} and G.\,R. Spedding (2024).
+  ``The effects of stratification on the near wake of 6:1 prolate spheroid.''
+  \textit{Journal of Fluid Mechanics}, 997, A43.
+  \href{https://doi.org/10.1017/jfm.2024.829}{doi:10.1017/jfm.2024.829}.
+  \textit{Open Access (CC BY 4.0).}
+}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} and G.\,R. Spedding (2022).
+  ``Wake identification of stratified flows using dynamic mode decomposition.''
+  \textit{Physical Review Fluids}, 7, 024801.
+  \href{https://doi.org/10.1103/PhysRevFluids.7.024801}{doi:10.1103/PhysRevFluids.7.024801}.
+  \textit{Editor's Suggestion.}
+}
+
+\cvpub{%
+  V.\,K. Chinta, \textbf{C.-Y. Ohh}, G. Spedding, and M. Luhar (2022).
+  ``Regime identification for stratified wakes from limited measurements:
+    a library-based sparse regression formulation.''
+  \textit{Physical Review Fluids}, 7, 033803.
+  \href{https://doi.org/10.1103/PhysRevFluids.7.033803}{doi:10.1103/PhysRevFluids.7.033803}.
+}
+
+\cvtodo{Add any additional publications not listed above.}
+
+\section{Presentations}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} (2024).
+  ``Advancing mesoscale ocean eddy characterization: integrating altimetry observations with modeling techniques.''
+  APS Division of Fluid Dynamics Meeting (DFD24), Salt Lake City, UT. \textit{(Oral)}
+}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} and G.\,R. Spedding (2023).
+  ``The near-wake of an inclined 6:1 prolate spheroid in uniform and stratified flows.''
+  APS Division of Fluid Dynamics Meeting (DFD23), Washington, DC.
+}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} and G.\,R. Spedding (2021).
+  ``Regime classification for stratified wakes using a convolutional neural network.''
+  APS Division of Fluid Dynamics Meeting (DFD21), Phoenix, AZ. \textit{(Poster)}
+}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} and G.\,R. Spedding (2020).
+  ``Automated stratified wake classification using dynamic mode decomposition.''
+  APS Division of Fluid Dynamics Meeting (DFD20), Virtual. \textit{(Poster)}
+}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh} and G.\,R. Spedding (2019).
+  ``Wake identification of stratified flows using dynamic mode decomposition.''
+  APS Division of Fluid Dynamics Meeting (DFD19), Seattle, WA. \textit{(Oral)}
+}
+
+\cvpub{%
+  \textbf{C.-Y. Ohh}, Y. Huang, Z. Wen, E. Kanso, and M. Luhar (2016).
+  ``Leveraging fluid-structure interaction for passive control of flapping locomotion.''
+  APS Division of Fluid Dynamics Meeting (DFD16), Portland, OR.
+}
+
+\cvtodo{Add any invited seminars or additional presentations.}
+
+\section{Awards \& Honors}
+
+\noindent Student Poster Award, APS Division of Fluid Dynamics Meeting \hfill 2021 \\[0.4em]
+
+\cvtodo{Add any additional awards, fellowships, or honors.}
+
+\cvtodo{Add additional sections as needed: Teaching, Service \& Outreach, Skills.}
+
+\end{document}
